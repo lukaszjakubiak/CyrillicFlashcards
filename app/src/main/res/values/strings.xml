@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">CyrylicFlashcards</string>
+    <string name="app_name">CyrillicFlashcards</string>
     <string name="action_settings">Settings</string>
-    <string name="russianLng">Rosyjski</string>
+    <string name="russianLng">rosyjski</string>
     <string name="title_activity_ukrainian_flashcards">UkrainianFlashcardsActivity</string>
-    <string name="ukrainianLng">Ukraiński</string>
+    <string name="ukrainianLng">ukraiński</string>
     <string name="flashcardsName">Fiszki z cyrylicą</string>
     <string name="chosenLanguage">Język domyślny</string>
     <string name="chosenLanguageUkrainian">Język ukraiński</string>

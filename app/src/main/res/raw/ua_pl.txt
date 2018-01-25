@@ -1,0 +1,66 @@
+А а
+a
+Б б
+b
+В в
+w
+Г г
+h
+Ґ ґ
+g
+Д д
+d
+Е е
+e
+Є є
+je, ie, e
+Ж ж
+ż
+З з
+z
+И и
+y
+I i
+i
+Ї ї
+ji, i
+Й й
+j
+К к
+k
+Л л
+l, ł
+М м
+m
+Н н
+n
+О о
+o
+П п
+p
+Р р
+r
+С с
+s
+Т т
+t
+У у
+u
+Ф ф
+f
+Х х
+ch
+Ц ц
+c
+Ч ч
+cz
+Ш ш
+sz
+Щ щ
+szcz
+Ь ь
+́ (znak zmiękczenia) lub pomija się1)
+Ю ю
+ju, iu, u
+Я я
+ja, ia, a

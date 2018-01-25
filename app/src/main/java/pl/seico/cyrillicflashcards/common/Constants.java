@@ -1,4 +1,4 @@
-package pl.seico.cyrylicflashcards.common;
+package pl.seico.cyrillicflashcards.common;
 
 /**
  * Created by lukasz on 24.01.18.

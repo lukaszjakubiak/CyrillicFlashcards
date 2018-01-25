@@ -1,4 +1,4 @@
-package pl.seico.cyrylicflashcards;
+package pl.seico.cyrillicflashcards;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -11,24 +11,23 @@ import android.widget.TextView;
 import java.util.Map;
 import java.util.Random;
 
-import pl.seico.cyrylicflashcards.common.Constants;
-import pl.seico.cyrylicflashcards.common.ImportResources;
+import pl.seico.cyrillicflashcards.common.ImportResources;
 
-import static pl.seico.cyrylicflashcards.common.Constants.LANGUAGE_PARAM_NAME;
-import static pl.seico.cyrylicflashcards.common.Constants.IS_FRESH_START_NAME;
-import static pl.seico.cyrylicflashcards.common.Constants.LANGUAGE_PL;
-import static pl.seico.cyrylicflashcards.common.Constants.LANGUAGE_RU;
-import static pl.seico.cyrylicflashcards.common.Constants.LANGUAGE_UA;
+import static pl.seico.cyrillicflashcards.common.Constants.IS_FRESH_START_NAME;
+import static pl.seico.cyrillicflashcards.common.Constants.LANGUAGE_PARAM_NAME;
+import static pl.seico.cyrillicflashcards.common.Constants.LANGUAGE_PL;
+import static pl.seico.cyrillicflashcards.common.Constants.LANGUAGE_RU;
+import static pl.seico.cyrillicflashcards.common.Constants.LANGUAGE_UA;
 
 public class FlashcardsActivity extends AppCompatActivity {
 
     private Map.Entry<String, String>[] flashcards;
 
     private final String CHAR_IDX_NAME = "charIdx";
-    private final String DISPLAY_CYRILIC_NAME = "displayCyrilic";
+    private final String DISPLAY_CYRILLIC_NAME = "displayCyrillic";
 
     private int charIdx;
-    private boolean displayCyrilic;
+    private boolean displayCyrillic;
 
     private TextView flashcardBtn;
 
@@ -60,7 +59,7 @@ public class FlashcardsActivity extends AppCompatActivity {
     }
 
     public void flashcardClick(View view) {
-        displayCyrilic = !displayCyrilic;
+        displayCyrillic = !displayCyrillic;
         generateRandomIndex();
         displayFlashcard();
     }
@@ -68,13 +67,13 @@ public class FlashcardsActivity extends AppCompatActivity {
     private void setInitialValues() {
         boolean isFreshStart = getIntent().getBooleanExtra(IS_FRESH_START_NAME, false);
         if (isFreshStart) {
-            getIntent().putExtra(Constants.IS_FRESH_START_NAME, false);
+            getIntent().putExtra(IS_FRESH_START_NAME, false);
             editor.clear();
             editor.commit();
-            displayCyrilic = true;
+            displayCyrillic = true;
             generateRandomIndex();
         } else {
-            displayCyrilic = sharedPreferences.getBoolean(DISPLAY_CYRILIC_NAME, true);
+            displayCyrillic = sharedPreferences.getBoolean(DISPLAY_CYRILLIC_NAME, true);
             charIdx = sharedPreferences.getInt(CHAR_IDX_NAME, 0);
         }
     }
@@ -95,31 +94,31 @@ public class FlashcardsActivity extends AppCompatActivity {
 
     private void displayFlashcard() {
         displayLatin();
-        displayCyrilic();
+        displayCyrillic();
     }
 
     private void generateRandomIndex() {
         Random random = new Random();
-        if (displayCyrilic) {
+        if (displayCyrillic) {
             charIdx = random.nextInt(flashcards.length);
         }
     }
 
-    private void displayCyrilic() {
-        if (displayCyrilic) {
+    private void displayCyrillic() {
+        if (displayCyrillic) {
             flashcardBtn.setText(flashcards[charIdx].getKey());
         }
     }
 
     private void displayLatin() {
-        if (!displayCyrilic) {
+        if (!displayCyrillic) {
             String latinStr = flashcards[charIdx].getValue();
             flashcardBtn.setText(latinStr);
         }
     }
 
     private void setSharedPreferences(){
-        editor.putBoolean(DISPLAY_CYRILIC_NAME, displayCyrilic);
+        editor.putBoolean(DISPLAY_CYRILLIC_NAME, displayCyrillic);
         editor.putInt(CHAR_IDX_NAME, charIdx);
         editor.commit();
     }

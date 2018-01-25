@@ -8,7 +8,7 @@
     android:gravity="center"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="pl.seico.cyrylicflashcards.FlashcardsActivity"
+    tools:context="pl.seico.cyrillicflashcards.FlashcardsActivity"
     tools:showIn="@layout/activity_flashcards">
 
     <TextView

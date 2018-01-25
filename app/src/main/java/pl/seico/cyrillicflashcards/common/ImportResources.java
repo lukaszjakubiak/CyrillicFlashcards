@@ -1,4 +1,4 @@
-package pl.seico.cyrylicflashcards.common;
+package pl.seico.cyrillicflashcards.common;
 
 import android.content.Context;
 
@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
-import static pl.seico.cyrylicflashcards.common.Constants.RAW_RESOURCES_NAME;
+import static pl.seico.cyrillicflashcards.common.Constants.RAW_RESOURCES_NAME;
 
 /**
  * Created by lukasz on 24.01.18.
